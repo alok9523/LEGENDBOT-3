@@ -5,7 +5,6 @@
   "keywords": [
     "plugin",
     "legendbot",
-    "modular",
     "productivity"
   ],
   "repository": "https://github.com/LEGEND-AI/LEGENDBOT",
@@ -56,6 +55,11 @@
       "value": "pro",
       "required": false
     },
+    "VCMODE": {
+      "description": "To install the Voice Chat plugin in LegendBot",
+      "value": "True",
+      "required": false
+    },
     "EXTERNAL_REPO": {
       "description": "To install extra plugins. if you don't want, change value to 'False'",
       "value": "True",
@@ -76,11 +80,15 @@
   "buildpacks": [{
     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
   },{
+    "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
+  },{
     "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
   },{
     "url": "https://github.com/heroku/heroku-buildpack-apt.git"
   },{
     "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+  },{
+    "url": "https://github.com/LEGEND-AI/heroku-buildpack-nodejs"
   },{
     "url": "heroku/python"
   }]
